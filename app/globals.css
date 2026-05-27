@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased;
+  background-color: theme("colors.page.DEFAULT");
+  color: theme("colors.ink.DEFAULT");
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.section-badge {
+  @apply inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium;
+  background-color: theme("colors.primary.soft");
+  color: theme("colors.primary.DEFAULT");
+}
+
+.card-surface {
+  @apply rounded-card shadow-card;
+  border: 1px solid theme("colors.line.DEFAULT");
+  background-color: theme("colors.page.white");
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card-lg;
+}
